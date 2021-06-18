@@ -1,0 +1,72 @@
+GET http://127.0.0.1:8000/api/flights
+
+###
+
+GET http://127.0.0.1:8000/api/flights/1
+
+###
+
+POST http://127.0.0.1:8000/api/flights/
+Content-Type: application/json
+
+{
+    "airline": "American Airlines",
+    "airlineLogo": "https://s21.q4cdn.com/616071541/files/multimedia-gallery/assets/Logos/american-airlines/THUMB-aa_aa__ahz_4cp_grd_pos.png",
+    "flightNumber": "AA3823",
+    "price":600,
+    "originAirport": "MAD",
+    "destinationAirport": "LON",
+    "originCiti": "Madrid",
+    "destinationCiti": "London",
+    "departingTime": 900,
+    "arrivalTime": 1200,
+    "avaliableSeats": 200
+}
+
+
+###
+DELETE http://127.0.0.1:8000/flights/2/
+
+
+###
+
+PUT http://127.0.0.1:8000/flights/6/
+Content-Type: application/json
+
+{
+    "airline": "Putin",
+    "airlineLogo": "https://s21.q4cdn.com/616071541/files/multimedia-gallery/assets/Logos/american-airlines/THUMB-aa_aa__ahz_4cp_grd_pos.png",
+    "flightNumber": "AA3823",
+    "price": 400,
+    "originAirport": "MAD",
+    "destinationAirport": "LON",
+    "originCiti": "Madrid",
+    "destinationCiti": "London",
+    "departingTime": 1000,
+    "arrivalTime": 1200,
+    "avaliableSeats": 300
+}
+
+
+###
+
+POST http://127.0.0.1:8000/api/auth/register/
+Content-Type: application/json
+
+{
+    "username": "pololo16",
+    "email": "p@email.com",
+    "password": "admin",
+    "passwordConfirmation": "admin"
+
+}
+
+###
+
+POST http://127.0.0.1:8000/api/auth/login/
+Content-Type: application/json
+
+{
+    "email": "p@email.com",
+    "password": "admin"
+}
